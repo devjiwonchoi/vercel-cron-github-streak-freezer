@@ -6,7 +6,7 @@ import type {
 } from './_types'
 
 async function getTargetFriend() {
-  // sort friends order by favorite, limit by 5 (default 10)
+  // Sort friends order by favorite, limit by 5 (default 10)
   const friendsList: FriendsListResponse = await fetcher({
     endpoint: '/talk/friends?friend_order=favorite&limit=3',
   })
@@ -16,7 +16,7 @@ async function getTargetFriend() {
     throw new Error('Target nickname is not defined')
   }
 
-  // find target friend by nickname
+  // Find target friend by nickname
   const targetFriend = friendsList.elements?.find((friend) =>
     friend.profile_nickname?.includes(targetNickname)
   )
@@ -29,6 +29,7 @@ async function getTargetFriend() {
 }
 
 async function sendKakaoMessage(friend: Friend) {
+  // Text message template to send
   const body: TemplateTextMessageData = {
     receiver_uuids: [friend.uuid],
     template_object: {
