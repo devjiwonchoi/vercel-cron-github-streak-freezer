@@ -39,6 +39,7 @@ async function sendKakaoMessage(friend: Friend) {
         web_url:
           process.env.KAKAO_MESSAGE_LINK ?? 'https://github.com/devjiwonchoi',
       },
+      button_title: process.env.KAKAO_MESSAGE_BUTTON_TITLE ?? 'Visit My GitHub',
     },
   }
   const response = await fetcher({
