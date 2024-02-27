@@ -1,0 +1,10 @@
+{
+  "name": "vercel-cron-reminder",
+  "private": true,
+  "version": "0.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.20",
+    "typescript": "^5.3.3"
+  }
+}
