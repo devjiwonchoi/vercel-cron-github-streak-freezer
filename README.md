@@ -11,6 +11,11 @@ Create one if you don't have one yet.
 
 > Example of a GitHub Activities.
 
+The Cron Job will create a `streak-freezer.md` file to your special repository with content like:
+
+```sh
+Commit Streak Freezed! Wed Feb 28 2024 07:48:44 GMT+0900 (Korean Standard Time)
+```
 
 ## How to Deploy
 
