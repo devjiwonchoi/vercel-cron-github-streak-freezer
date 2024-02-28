@@ -1,8 +1,8 @@
 {
   "crons": [
     {
-      "path": "/api/send-reminder",
-      "schedule": "57 04 * * *"
+      "path": "/api/streak-freezer",
+      "schedule": "30 14 * * *"
     }
   ]
 }
