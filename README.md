@@ -9,13 +9,9 @@ This is a [Vercel Cron Job](https://vercel.com/docs/cron-jobs) that periodically
 Create one if you don't have one yet.
 ![Jiwon Choi's GitHub Activities](https://github.com/devjiwonchoi/vercel-cron-github-streak-freezer/assets/120007119/56e1ff79-14b1-426a-83e7-39bc3088f122)
 
-> Example of a GitHub Activities.
+> Example of GitHub Activities
 
-The Cron Job will create a `streak-freezer.md` file to your special repository with content like:
-
-```sh
-Commit Streak Freezed! Wed Feb 28 2024 07:48:44 GMT+0900 (Korean Standard Time)
-```
+The Cron Job will create a `github-streak-freezer.md` file to your special repository.
 
 ## How to Deploy
 
@@ -53,3 +49,18 @@ We recommend you to use [crontab guru](https://crontab.guru) to generate your cr
 1. Clone this repository.
 2. Install dependencies with `pnpm i`.
 3. Run [`pnpm vercel dev`](https://vercel.com/docs/cli) to start the development server.
+
+## Troubleshooting
+
+- You can view the status of the cron job in the [Vercel Dashboard](https://vercel.com/devjiwonchoi/vercel-cron-github-streak-freezer/settings/cron-jobs) > Project Settings > Cron Jobs.
+- You can view the logs of the cron job in the [Vercel Runtime Logs](https://vercel.com/docs/observability/runtime-logs).
+
+### Status Codes
+
+> We do not override the default error codes of Vercel.
+> See [Vercel Error Codes](https://vercel.com/docs/errors) for more information.
+
+- `200`: The cron job found an activity for today, did not creat a commit.
+- `201`: The cron job successfully created a commit.
+- `401`: The request was not authorized to run the cron job.
+- `403`: The environment variable `GITHUB_USERNAME` was not provided.

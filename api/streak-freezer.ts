@@ -5,7 +5,7 @@ const username = process.env.GITHUB_USERNAME
 
 export async function GET(request: Request) {
   if (!username) {
-    throw new Error('GITHUB_USERNAME is not set.')
+    return new Response('GITHUB_USERNAME is not set.', { status: 403 })
   }
 
   const authHeader = request.headers.get('authorization')
@@ -19,7 +19,7 @@ export async function GET(request: Request) {
     }
 
     const response = await commit(username)
-    return new Response(response, { status: 200 })
+    return new Response(response, { status: 201 })
   }
 
   return new Response('Unauthorized.', { status: 401 })
