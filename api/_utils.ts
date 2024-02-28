@@ -1,4 +1,4 @@
-export const KAKAO_API_URL = 'https://kapi.kakao.com/v1/api'
+export const GITHUB_API_URL = 'https://api.github.com'
 
 export async function fetcher({
   endpoint,
@@ -9,11 +9,12 @@ export async function fetcher({
   method?: string
   body?: string
 }) {
-  const url = `${KAKAO_API_URL}${endpoint}`
+  const url = `${GITHUB_API_URL}${endpoint}`
   try {
     const response = await fetch(url, {
       headers: {
-        Authorization: `Bearer ${process.env.KAKAO_API_TOKEN}`,
+        Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
+        Accept: 'application/vnd.github+json',
       },
       method,
       body,
