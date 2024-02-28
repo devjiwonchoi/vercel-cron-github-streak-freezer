@@ -7,10 +7,10 @@
 This is a [Vercel Cron Job](https://vercel.com/docs/cron-jobs) that periodically monitors your GitHub activity and preserves your streak by creating a commit to your [special repository](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme).
 
 Create one if you don't have one yet.
+![Jiwon Choi's GitHub Activities](https://github.com/devjiwonchoi/vercel-cron-github-streak-freezer/assets/120007119/56e1ff79-14b1-426a-83e7-39bc3088f122)
 
-![Malte Ubl's GitHub Streak](https://user-images.githubusercontent.com/89679/87104885-2425a900-c20e-11ea-9d06-d5e513fece95.png)
+> Example of a GitHub Activities.
 
-> Extreme example of a GitHub streak by [Malte Ubl](https://github.com/cramforce).
 
 ## How to Deploy
 
@@ -47,4 +47,4 @@ We recommend you to use [crontab guru](https://crontab.guru) to generate your cr
 
 1. Clone this repository.
 2. Install dependencies with `pnpm i`.
-3. Run `pnpm vercel dev` to start the development server.
+3. Run [`pnpm vercel dev`](https://vercel.com/docs/cli) to start the development server.
