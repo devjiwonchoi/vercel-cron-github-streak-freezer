@@ -4,13 +4,13 @@
 
 ## What is this?
 
-This is a [Vercel Cron Job](https://vercel.com/docs/cron-jobs) that periodically monitors your GitHub activity and preserve your streak by creating a commit to your [special repository](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme).
+This is a [Vercel Cron Job](https://vercel.com/docs/cron-jobs) that periodically monitors your GitHub activity and preserves your streak by creating a commit to your [special repository](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme).
 
 Create one if you don't have one yet.
 
 ![Malte Ubl's GitHub Streak](https://user-images.githubusercontent.com/89679/87104885-2425a900-c20e-11ea-9d06-d5e513fece95.png)
 
-> Extreme example of a GitHub streak.
+> Extreme example of a GitHub streak by [Malte Ubl](https://github.com/cramforce).
 
 ## How to Deploy
 
