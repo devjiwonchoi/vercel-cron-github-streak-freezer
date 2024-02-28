@@ -4,5 +4,11 @@
       "path": "/api/streak-freezer",
       "schedule": "30 14 * * *"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://vercel.com/new/clone?repository-url=https://github.com/devjiwonchoi/vercel-cron-github-streak-freezer&env=CRON_SECRET,GITHUB_ACCESS_TOKEN,GITHUB_USERNAME"
+    }
   ]
 }
