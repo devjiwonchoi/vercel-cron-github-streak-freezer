@@ -42,3 +42,9 @@ You can modify the cron job schedule in [`vercel.json`](./vercel.json) through t
 > This cron job is scheduled to run every day at midnight (UTC).
 
 We recommend you to use [crontab guru](https://crontab.guru) to generate your cron expressions. This project is set to Korean Standard Time (UTC+9) 23:30.
+
+## Local Development
+
+1. Clone this repository.
+2. Install dependencies with `pnpm i`.
+3. Run `pnpm vercel dev` to start the development server.
