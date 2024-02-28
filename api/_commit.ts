@@ -16,15 +16,19 @@ async function getSha(username: string) {
   return response.sha
 }
 
+const content = `
+### What is this?
+
+See https://github.com/devjiwonchoi/vercel-cron-github-streak-freezer
+`
+
 async function createOrUpdateFile(username: string) {
   const response = await fetcher({
-    endpoint: `/repos/${username}/${username}/contents/streak-freezer.md`,
+    endpoint: `/repos/${username}/${username}/contents/github-streak-freezer.md`,
     method: 'PUT',
     body: JSON.stringify({
-      message: 'Update streak-freezer.md',
-      content: Buffer.from(`Commit Streak Freezed! ${new Date()}`).toString(
-        'base64'
-      ),
+      message: `chore: github streak freezed!`,
+      content: Buffer.from(content).toString('base64'),
       sha: await getSha(username),
     }),
   })
@@ -38,7 +42,7 @@ export async function commit(username: string) {
   }
 
   const response = await createOrUpdateFile(username)
-  if (response.content.name) {
+  if (!response.content.name) {
     throw new Error('Failed to commit.')
   }
 
