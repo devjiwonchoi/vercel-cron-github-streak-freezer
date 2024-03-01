@@ -2,7 +2,7 @@
   "crons": [
     {
       "path": "/api/streak-freezer",
-      "schedule": "58 14 * * *"
+      "schedule": "30 14 * * *"
     }
   ],
   "redirects": [
