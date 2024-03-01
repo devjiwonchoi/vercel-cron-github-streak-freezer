@@ -10,7 +10,7 @@ async function validateUsername(username: string) {
 
 async function getSha(username: string) {
   const response = await fetcher({
-    endpoint: `/repos/${username}/${username}/contents/streak-freezer.md`,
+    endpoint: `/repos/${username}/${username}/contents/github-streak-freezer.md`,
   })
 
   return response.sha
