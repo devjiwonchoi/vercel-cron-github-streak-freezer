@@ -20,6 +20,8 @@ const content = `
 ### What is this?
 
 See https://github.com/devjiwonchoi/vercel-cron-github-streak-freezer
+
+The latest streak freezed was: ${new Date().toISOString()}
 `
 
 async function createOrUpdateFile(username: string) {
