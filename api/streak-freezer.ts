@@ -1,3 +1,4 @@
+import VercelCronLogger from 'vercel-cron-logger'
 import { checkToday } from './_check-today'
 import { commit } from './_commit'
 
@@ -8,10 +9,10 @@ export async function GET(request: Request) {
     return new Response('GITHUB_USERNAME is not set.', { status: 403 })
   }
 
-  const authHeader = request.headers.get('authorization')
-
   // See https://vercel.com/docs/cron-jobs/manage-cron-jobs#securing-cron-jobs
+  const authHeader = request.headers.get('authorization')
   if (authHeader === `Bearer ${process.env.CRON_SECRET}`) {
+    await VercelCronLogger(request)
     const hasActivityToday = await checkToday(username)
 
     if (hasActivityToday) {

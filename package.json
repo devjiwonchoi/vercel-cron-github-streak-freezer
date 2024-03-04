@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "license": "MIT",
+  "dependencies": {
+    "vercel-cron-logger": "^0.0.1"
+  },
   "devDependencies": {
     "@types/node": "^20.11.20",
     "typescript": "^5.3.3",
